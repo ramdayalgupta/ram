@@ -1,8 +1,9 @@
 FROM centos:latest
 MAINTAINER ramdayal.gupta@cygnetinfotech.com
-RUN dnf install -y httpd
-RUN yum install -y zip
-RUN yum install -y unzip
+RUN yum update -y
+RUN yum install httpd -y
+RUN yum install zip -y
+RUN yum install unzip -y
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page291/hightech.zip /var/www/html/
 WORKDIR /var/www/html
 RUN unzip hightech.zip
