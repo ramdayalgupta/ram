@@ -8,8 +8,8 @@ RUN yum -y install httpd \
  unzip
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page291/hightech.zip /var/www/html/
 WORKDIR /var/www/html
-RUN unzip hightech.zip /tmp
-RUN cp -rvf /tmp/hightech/* .
+RUN unzip hightech.zip
+RUN cp -rvf hightech/* .
 RUN rm -rf hightech hightech.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
