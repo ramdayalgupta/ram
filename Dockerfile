@@ -1,4 +1,4 @@
-FROM centos:latest
+FROM centos:7
 MAINTAINER ramdayal.gupta@cygnetinfotech.com
 RUN sudo yum install -y httpd \
 	zip \
