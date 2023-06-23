@@ -1,8 +1,8 @@
 FROM centos:6
 MAINTAINER ramdayal.gupta@cygnetinfotech.com
-RUN sudo yum install -y httpd
-RUN sudo yum install -y zip 
-RUN sudo yum install -y unzip
+RUN yum install -y httpd
+RUN yum install -y zip 
+RUN yum install -y unzip
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page291/hightech.zip /var/www/html/
 WORKDIR /var/www/html
 RUN unzip hightech.zip
