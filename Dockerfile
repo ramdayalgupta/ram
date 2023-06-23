@@ -1,9 +1,6 @@
-FROM centos:6
+FROM centos:latest
 MAINTAINER ramdayal.gupta@cygnetinfotech.com
-RUN yum -y install epel-release && yum clean all
-RUN yum install -y httpd && yum clean all && systemctl enable httpd.service
-RUN yum install -y zip 
-RUN yum install -y unzip
+RUN yum -y install httpd
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page291/hightech.zip /var/www/html/
 WORKDIR /var/www/html
 RUN unzip hightech.zip
