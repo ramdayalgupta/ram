@@ -13,6 +13,5 @@ RUN cp -rvf hightech-html/* .
 RUN rm -rf hightech-html hightech.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
-RUN systemctl start httpd
 RUN systemctl status httpd
 RUN netstat -tulpn
